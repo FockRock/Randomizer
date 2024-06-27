@@ -14,9 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+        var a = 100
+
 
         bindingClass.button.setOnClickListener{
-            bindingClass.tv.text = Random.nextInt(1,1077).toString()
+            a = bindingClass.editTextNumber.text.toString().toInt()
+            bindingClass.tv.text = Random.nextInt(1, a+1).toString()
         }
     }
 }

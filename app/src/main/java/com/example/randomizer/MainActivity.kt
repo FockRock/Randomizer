@@ -9,7 +9,7 @@ import com.example.randomizer.databinding.ActivityMainBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var bindingClass : ActivityMainBinding
+    private lateinit var bindingClass: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
@@ -17,9 +17,10 @@ class MainActivity : AppCompatActivity() {
         var a = 100
 
 
-        bindingClass.button.setOnClickListener{
-            a = bindingClass.editTextNumber.text.toString().toInt()
-            bindingClass.tv.text = Random.nextInt(1, a+1).toString()
+        bindingClass.button.setOnClickListener {
+            if (bindingClass.editTextNumber.text.isNotEmpty())
+                a = bindingClass.editTextNumber.text.toString().toInt()
+            bindingClass.tv.text = Random.nextInt(1, a + 1).toString()
         }
     }
 }

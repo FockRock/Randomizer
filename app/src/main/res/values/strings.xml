@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Randomizer</string>
+    <string name="enter_your_number_here">Enter your number here!</string>
+    <string name="randomize">Randomize!</string>
 </resources>

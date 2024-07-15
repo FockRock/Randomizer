@@ -5,7 +5,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.transition.Visibility
 import com.example.randomizer.databinding.ActivityMainBinding
+import kotlinx.coroutines.delay
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
